@@ -13,6 +13,8 @@ def page1(gameState: dict) -> int:
         res = 2
     elif choix == "2":
         res = 2
+    elif choix == "3":
+        res = 1
     else:
         print("Choix invalide.")
         res = 1                  # on reste sur cette page
