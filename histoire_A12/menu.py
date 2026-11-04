@@ -6,6 +6,7 @@ def menu() -> dict:
         "nom": nom,
         "force": 7,
         "vie": 12,
+        "portée": 1,
         "inventaire": [],
     }
     print(f"Bienvenue, {nom} ! Force : {gameState['force']}, Vie : {gameState['vie']}\n")

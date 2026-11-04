@@ -8,7 +8,7 @@ def page2(gameState: dict) -> int:
     ascii_dragon()
     print("Un dragon surgit et vous barre la route !")
 
-    if "épée" in gameState["inventaire"]:
+    if gameState["force"] + gameState["portée"] >= 10:
         res=0
     else:
         print("Vous ne faites pas le poids... Le dragon l'emporte.")
