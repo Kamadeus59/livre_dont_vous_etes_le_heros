@@ -40,4 +40,4 @@ def combat_orc(gameState: dict) -> bool:
     res: bool = combat(gameState, monstre)
     return res
 
-def ouvrir_inventaire(gameState : dict):  dict: 
+
