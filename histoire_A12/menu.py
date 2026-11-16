@@ -4,10 +4,8 @@ def menu() -> dict:
     nom: str = input("Quel est votre nom ? ")
     gameState: dict = {
         "nom": nom,
-        "force": 7,
-        "vie": 12,
-        "portée": 1,
         "inventaire": [],
+        "map" : list = []
     }
     print(f"Bienvenue, {nom} ! Force : {gameState['force']}, Vie : {gameState['vie']}\n")
     return gameState
