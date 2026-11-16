@@ -15,7 +15,12 @@ def menu() -> dict:
             if j == 0 or j == 13 or i == 0 or i == 13 :
                 gameState["map"][i].append(-1)
             else:
-                gameState["map"][i].append(iteration_page)
+                if iteration_page < 10: 
+                    gameState["map"][i].append("0"+"0"+str(iteration_page))
+                elif iteration_page < 100:
+                    gameState["map"][i].append("0"+str(iteration_page))
+                else: 
+                    gameState["map"][i].append(iteration_page)
                 iteration_page += 1
             
     print(gameState["map"])
