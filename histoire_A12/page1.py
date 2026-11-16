@@ -1,6 +1,11 @@
+from OUTILS import map
+
 def page1(gameState: dict) -> int:
     res = - 2
-    res = 1001
+
+    a = int(input("Que voulez vous faire ?"))
+    if a == "m":
+        map.afficher_map(gameState)
         
     
     return res
