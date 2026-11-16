@@ -5,7 +5,17 @@ def menu() -> dict:
     gameState: dict = {
         "nom": nom,
         "inventaire": [],
-        "map" : list = []
+        "map" : []
     }
-    print(f"Bienvenue, {nom} ! Force : {gameState['force']}, Vie : {gameState['vie']}\n")
+    print(f"Bienvenue, {nom}")
+    iteration_page = 1
+    for i in range(12):
+        gameState["map"].append([])
+        for j in range(12):
+            gameState["map"][i].append(iteration_page)
+            iteration_page += 1
+            
+    print(gameState["map"])
+
+
     return gameState
