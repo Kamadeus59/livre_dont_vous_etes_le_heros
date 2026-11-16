@@ -5,22 +5,23 @@ def menu() -> dict:
     gameState: dict = {
         "nom": nom,
         "inventaire": [],
-        "map" : []
+        "map" : [],
+        "position" : [1,1]
     }
     print(f"Bienvenue, {nom}")
     iteration_page = 1
-    for i in range(14):
+    for y in range(14):
         gameState["map"].append([])
-        for j in range(14):
-            if j == 0 or j == 13 or i == 0 or i == 13 :
-                gameState["map"][i].append(-1)
+        for x in range(14):
+            if x == 0 or x == 13 or y == 0 or y == 13 :
+                gameState["map"][y].append(-1)
             else:
                 if iteration_page < 10: 
-                    gameState["map"][i].append("0"+"0"+str(iteration_page))
+                    gameState["map"][y].append("1" + "0"+"0"+str(iteration_page))
                 elif iteration_page < 100:
-                    gameState["map"][i].append("0"+str(iteration_page))
+                    gameState["map"][y].append("1" + "0"+str(iteration_page))
                 else: 
-                    gameState["map"][i].append(iteration_page)
+                    gameState["map"][y].append("1" + str(iteration_page))
                 iteration_page += 1
             
     print(gameState["map"])
