@@ -1,7 +1,7 @@
 from ASCII import ascii_map 
 
 def afficher_map(gameState : dict) -> dict:
-
+    print("1")
     ascii_map.ascii_map()
 
     res: list = gameState["inventaire"]

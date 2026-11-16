@@ -24,7 +24,4 @@ def menu() -> dict:
                     gameState["map"][y].append("1" + str(iteration_page))
                 iteration_page += 1
             
-    print(gameState["map"])
-
-
     return gameState
