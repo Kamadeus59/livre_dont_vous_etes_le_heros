@@ -12,6 +12,9 @@ def couleurs_disponibles() -> bool:
     return res
 
 def couleurs():
+    '''
+    Retourne un dictionnaire associant les couleurs aux codes ANSI correspondants.
+    '''
     dictionnaire_couleur = { 
         1 : "\033[41m  \033[0m",
         2 : "\033[42m  \033[0m",
@@ -25,13 +28,18 @@ def couleurs():
     return dictionnaire_couleur
 
 def afficher_map(carte):
+    '''
+    Affiche la carte du jeu.
+    '''
     for ligne in carte:
         for case in ligne:
             print(couleurs().get(case, "  "), end="")
         print()
 
 def ascii_map(position) -> None:
-    """Affiche la map complete si le PC le permet, une version simplifié sinon"""
+    """
+    Affiche la map complete si le PC le permet, une version simplifié sinon
+    """
     carte = [
     [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
     [3,3,3,4,4,4,4,4,4,4,4,3,3,3],

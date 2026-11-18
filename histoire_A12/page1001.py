@@ -31,10 +31,6 @@ from OUTILS.map import afficher_map
 from OUTILS.interface import interface
 def page1001(gameState: dict) -> int:
     res = -2
-    interface()
-
-    afficher_map(gameState)
-
     res = move(gameState,1001)
 
 

@@ -1,12 +1,20 @@
+
 from ASCII import ascii_map 
 
+
 def afficher_map(gameState : dict) -> dict:
+    '''
+    Affiche la map du jeu.
+    '''
     ascii_map.ascii_map(gameState["position"])
 
     res: list = gameState["inventaire"]
     return res
 
 def move(gameState : dict,originalTile) -> list:
+    '''
+    Permet de déplacer le joueur sur la map.
+    '''
     validAnswer = False
     Xdeplacement = 0
     Ydeplacement = 0

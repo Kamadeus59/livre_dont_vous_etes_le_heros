@@ -1,14 +1,11 @@
 def menu() -> dict:
     """Création du personnage : retourne le dictionnaire gameState."""
-    print("=== CRÉATION DU PERSONNAGE ===")
-    nom: str = input("Quel est votre nom ? ")
     gameState: dict = {
-        "nom": nom,
+        "nom": '',
         "inventaire": [],
         "map" : [],
         "position" : [1,1]
     }
-    print(f"Bienvenue, {nom}")
     iteration_page = 1
     for y in range(14):
         gameState["map"].append([])
