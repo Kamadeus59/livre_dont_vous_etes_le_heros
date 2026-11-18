@@ -1,7 +1,6 @@
 from ASCII import ascii_map 
 
 def afficher_map(gameState : dict) -> dict:
-    
     ascii_map.ascii_map(gameState["position"])
 
     res: list = gameState["inventaire"]
@@ -27,10 +26,9 @@ def move(gameState : dict,originalTile) -> list:
             Xdeplacement = -1
         else:
             validAnswer = False
-    
 
     res : int = -2
-    position : list = gameState["position"]
+    position : tuple= gameState["position"]
     map : list= gameState["map"]
     newPosition : tuple= (position[0]+Xdeplacement,position[1]+Ydeplacement)
     Id : int = map[newPosition[1]][newPosition[0]]
@@ -39,5 +37,4 @@ def move(gameState : dict,originalTile) -> list:
         print("Vous ne pouvez pas aller par là !")
     else:
         res = int(Id)
-        gameState["position"] = [position[1]+Ydeplacement,position[0]+Xdeplacement]
     return res
