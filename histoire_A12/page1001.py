@@ -33,7 +33,6 @@ def page1001(gameState: dict) -> int:
 
     afficher_map(gameState)
 
-
     res = move(gameState,1001)
 
 
