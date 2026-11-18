@@ -29,11 +29,8 @@ def page1(gameState: dict) -> int:
 from OUTILS.map import move
 def page1001(gameState: dict) -> int:
     res = -2
-    Xdeplacement = int(input("comment on va en X ?"))
-    Ydeplacement = int(input("comment on vaen Y ?"))
-    toDo : str = move(gameState,Xdeplacement,Ydeplacement)
-    if toDo[0]=="G":
-        res = int("1"+toDo[-3:])
+    res = move(gameState,1001)
+
 
         
     

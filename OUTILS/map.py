@@ -7,15 +7,35 @@ def afficher_map(gameState : dict) -> dict:
     res: list = gameState["inventaire"]
     return res
 
-'''def move(gameState : dict,Xdeplacment,Ydeplacement) -> str:
-    res : str= "Error"
+def move(gameState : dict,originalTile) -> list:
+    validAnswer = False
+    Xdeplacement = 0
+    Ydeplacement = 0
+    print("Nord : N   Sud : S")
+    print("Est : E    Ouest : O")
+    while not validAnswer:
+        
+        direction = input("Par où allez vous ?")
+        validAnswer = True
+        if direction == "N":
+            Ydeplacement = -1
+        elif direction == "S":
+            Ydeplacement = 1
+        elif direction == "E":
+            Xdeplacement = 1
+        elif direction == "O":
+            Xdeplacement = -1
+        else:
+            validAnswer = False
+
+    res : int = -2
     position : tuple= gameState["position"]
     map : list= gameState["map"]
-    newPosition : tuple= (position[0]+Xdeplacment,position[1]+Ydeplacement)
-    Id : number = map[newPosition[0]][newPosition[1]]
+    newPosition : tuple= (position[0]+Xdeplacement,position[1]+Ydeplacement)
+    Id : int = map[newPosition[1]][newPosition[0]]
     if Id == -1:
-        res = "OutOfMap"
+        res = originalTile
+        print("Vous ne pouvez pas aller par là !")
     else:
-        res = f"GoToTileNumber{Id}"
-    print(res)
-    return res'''
+        res = int(Id)
+    return res
