@@ -2,7 +2,7 @@ from ASCII import ascii_map
 
 def afficher_map(gameState : dict) -> dict:
     print("1")
-    ascii_map.ascii_map()
+    ascii_map.ascii_map(gameState["position"])
 
     res: list = gameState["inventaire"]
     return res
