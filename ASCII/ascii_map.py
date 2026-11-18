@@ -1,8 +1,5 @@
 import os
 import sys
-from histoire_A12 import menu
-
-#Création de la carte, avec position du joueur
 
 VERSION_SIMPLE = "="
 def couleurs_disponibles() -> bool:
