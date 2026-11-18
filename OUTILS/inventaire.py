@@ -1,4 +1,4 @@
-def ouvrir_inventaire(gameState : dict) -> dict:
+def ouvrir_inventaire(gameState : dict):
     """
     Ouvre l'inventaire du héros et permet de l'utiliser.
 
