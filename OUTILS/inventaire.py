@@ -6,7 +6,7 @@ def ouvrir_inventaire(gameState : dict) -> dict:
 
     Retourne le dictionnaire gameState mis à jour.
     """
-    res: list = gameState["inventaire"]
+    res: dict = gameState["inventaire"]
     return res
 
     # A IMPLEMENTER
