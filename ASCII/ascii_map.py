@@ -59,8 +59,8 @@ def ascii_map(position) -> None:
                     print("Vous êtes toujours au meme endroit")
                     carte[i][j] == terrain_case 
                 
-    terrain_case = carte[position[0]][position[1]]
-    carte[position[0]][position[1]] = 8
+    terrain_case = carte[position[1]][position[0]]
+    carte[position[1]][position[0]] = 8
     if couleurs_disponibles():
         print()
         afficher_map(carte)

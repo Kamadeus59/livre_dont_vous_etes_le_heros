@@ -17,13 +17,13 @@ def move(gameState : dict,originalTile) -> list:
         
         direction = input("Par où allez vous ?")
         validAnswer = True
-        if direction == "N":
+        if direction == "N" or direction=="n":
             Ydeplacement = -1
-        elif direction == "S":
+        elif direction == "S" or direction=="s":
             Ydeplacement = 1
-        elif direction == "E":
+        elif direction == "E" or direction=="e":
             Xdeplacement = 1
-        elif direction == "O":
+        elif direction == "O" or direction=="o":
             Xdeplacement = -1
         else:
             validAnswer = False
@@ -32,12 +32,12 @@ def move(gameState : dict,originalTile) -> list:
     res : int = -2
     position : list = gameState["position"]
     map : list= gameState["map"]
-    newPosition : tuple= (position[0]+Xdeplacement,position[1]+Ydeplacement)
+    newPosition : tuple= (position[0]+Xdeplacement, position[1]+Ydeplacement)
     Id : int = map[newPosition[1]][newPosition[0]]
     if Id == -1:
         res = originalTile
         print("Vous ne pouvez pas aller par là !")
     else:
         res = int(Id)
-        gameState["position"] = [position[1]+Ydeplacement,position[0]+Xdeplacement]
+        gameState["position"] = [newPosition[0],newPosition[1]]
     return res
