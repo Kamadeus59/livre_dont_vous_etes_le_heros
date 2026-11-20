@@ -4,7 +4,7 @@ def menu() -> dict:
         "nom": '',
         "inventaire": [],
         "map" : [],
-        "position" : [1,1]
+        "position" : [11,2]
     }
     iteration_page = 1
     for y in range(14):
@@ -14,7 +14,7 @@ def menu() -> dict:
                 gameState["map"][y].append(-1)
             else:
                 if iteration_page < 10: 
-                    gameState["map"][y].append("1" + "0"+"0"+str(iteration_page))
+                    gameState["map"][y].append("1" + "0" + "0"+str(iteration_page))
                 elif iteration_page < 100:
                     gameState["map"][y].append("1" + "0"+str(iteration_page))
                 else: 

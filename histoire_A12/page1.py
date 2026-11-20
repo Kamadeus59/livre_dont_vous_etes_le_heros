@@ -8,6 +8,7 @@ def page1(gameState: dict) -> int:
     Affiche la présentation du jeu.
     """
     couleurs_disponibles.couleurs_disponibles()
+    map.afficher_map(gameState)
     nom: str = input("Quel est votre nom ? ")
     texte1 = [
         f"Bienvenue, \033[31m{nom}\033[0m. Vous entrez dans le monde merveilleux de Freldia !",

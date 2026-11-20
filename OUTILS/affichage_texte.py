@@ -11,6 +11,6 @@ def affichage_texte(texte: str) -> None:
                 time.sleep(0.05)
             print(" ", end="", flush=True)
             if mot[-1] in [".", "!", "?"]:
-                time.sleep(0.5)
+                time.sleep(0.2)
             time.sleep(0.05)
         print()
