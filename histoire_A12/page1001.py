@@ -26,10 +26,14 @@ def page1(gameState: dict) -> int:
 
     return res'''
 
-from OUTILS.map import move, afficher_map
+from OUTILS.map import move
+from OUTILS.map import afficher_map
+from OUTILS.interface import interface
 def page1001(gameState: dict) -> int:
     res = -2
+    interface()
     afficher_map(gameState)
+
     res = move(gameState,1001)
 
 
