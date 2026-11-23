@@ -37,7 +37,6 @@ def page1001(gameState: dict) -> int:
 
 
     afficher_map(gameState)
-    dialoguer_avec_PNJ("Mia",gameState)
 
     res = move(gameState,1001)
 
