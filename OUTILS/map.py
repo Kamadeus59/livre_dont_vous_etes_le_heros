@@ -45,4 +45,5 @@ def move(gameState : dict,originalTile) -> list:
         print("Vous ne pouvez pas aller par là !")
     else:
         res = int(Id)
+    print(position, newPosition)
     return res

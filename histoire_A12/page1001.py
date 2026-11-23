@@ -29,12 +29,18 @@ def page1(gameState: dict) -> int:
 from OUTILS.map import move
 from OUTILS.map import afficher_map
 from OUTILS.interface import interface
+from OUTILS.personnages_non_joueurs import dialoguer_avec_PNJ
 def page1001(gameState: dict) -> int:
     res = -2
     interface()
+    
+
+
     afficher_map(gameState)
+    dialoguer_avec_PNJ("Mia",gameState)
 
     res = move(gameState,1001)
+
 
 
         

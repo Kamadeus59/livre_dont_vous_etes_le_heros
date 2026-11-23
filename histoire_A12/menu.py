@@ -4,7 +4,7 @@ def menu() -> dict:
         "nom": '',
         "inventaire": [],
         "map" : [],
-        "position" : [11,2]
+        "position" : (1,1)
     }
     iteration_page = 1
     for y in range(14):
