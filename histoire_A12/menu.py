@@ -2,9 +2,10 @@ def menu() -> dict:
     """Création du personnage : retourne le dictionnaire gameState."""
     gameState: dict = {
         "nom": '',
-        "inventaire": [],
+        "inventaire": ["TEST"],
         "map" : [],
-        "position" : [11,2]
+        "position" : (1,1), # postion[0] = Y, postion[1] = X /// 1002 = [1,2]
+        "ID_map" : 0 
     }
     iteration_page = 1
     for y in range(14):

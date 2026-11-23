@@ -11,7 +11,13 @@ def afficher_map(gameState : dict) -> dict:
     res: list = gameState["inventaire"]
     return res
 
-def move(gameState : dict,originalTile) -> list:
+def afficher_map_legend(gameState: dict):
+    '''
+    Affiche la map du jeu avec sa légende.
+    '''
+    ascii_map.legende_map()
+
+def move(gameState : dict ,originalTile) -> list:
     '''
     Permet de déplacer le joueur sur la map.
     '''
@@ -40,6 +46,8 @@ def move(gameState : dict,originalTile) -> list:
     map : list= gameState["map"]
     newPosition : tuple= (position[0]+Xdeplacement, position[1]+Ydeplacement)
     Id : int = map[newPosition[1]][newPosition[0]]
+    gameState["ID_map"] = Id
+    gameState["position"]= newPosition
     if Id == -1:
         res = originalTile
         print("Vous ne pouvez pas aller par là !")
