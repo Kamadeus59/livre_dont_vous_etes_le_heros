@@ -1,5 +1,4 @@
-from OUTILS.map import *
-from OUTILS import interface
+from OUTILS.importation import *
 import os
 
 def page1001(gameState: dict) -> int:
