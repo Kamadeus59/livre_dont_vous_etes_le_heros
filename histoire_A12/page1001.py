@@ -1,5 +1,4 @@
-from OUTILS.map import move
-from OUTILS import interface
+from OUTILS.importation import *
 import os
 
 def page1001(gameState: dict) -> int:
@@ -16,7 +15,8 @@ def page1001(gameState: dict) -> int:
         elif action =="M" or action =="m":
             interface.ouvrir_map(gameState)
         elif action != "D" or action != "d":
-            print("Appuyer sur une touche valable")
+            print(action)
+            ascii_attention.choix_non_valide()
     
-    res = move(gameState,gameState["ID_map"])
+    res = map.move(gameState,gameState["ID_map"])
     return res
