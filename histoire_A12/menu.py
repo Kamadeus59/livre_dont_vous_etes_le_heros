@@ -5,7 +5,8 @@ def menu() -> dict:
         "inventaire": ["TEST"],
         "map" : [],
         "position" : (1,1), # postion[0] = Y, postion[1] = X /// 1002 = [1,2]
-        "ID_map" : 0 
+        "ancienne position":(1,1),
+        "ID_map" : 1001 #l'id de la tuile sur laquelle on est. Départ : 1001 
     }
     iteration_page = 1
     for y in range(14):
