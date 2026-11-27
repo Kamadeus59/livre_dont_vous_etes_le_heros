@@ -105,4 +105,7 @@ def narrateur(gameState):
     ancien_biome = noms_de_biomes_entrant[map_de_biomes[gameState["ancienne position"][1]][gameState["ancienne position"][0]]]
     nouveau_biome = noms_de_biomes_sortant[map_de_biomes[gameState["position"][1]][gameState["position"][0]]]
 
-    print(f"Vous quittez {ancien_biome} et arrivez dans {nouveau_biome}")
+    if map_de_biomes[gameState["ancienne position"][1]][gameState["ancienne position"][0]] == map_de_biomes[gameState["position"][1]][gameState["position"][0]]:
+        print(f"Vous êtes toujours dans {nouveau_biome}")
+    else:
+        print(f"Vous quittez {ancien_biome} et arrivez dans {nouveau_biome}")

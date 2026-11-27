@@ -5,6 +5,8 @@ from ASCII import ascii_interface
 from ASCII import ascii_map
 
 # OUTILS
+from OUTILS import *
+
 from OUTILS import affichage_texte
 from OUTILS import couleurs_disponibles
 from OUTILS import interface

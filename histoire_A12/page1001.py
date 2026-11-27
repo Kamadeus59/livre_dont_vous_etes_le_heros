@@ -8,7 +8,7 @@ def page1001(gameState: dict) -> int:
     interface.interface()
     action : str = ""
 
-    narrateur(gameState)
+    map.narrateur(gameState)
 
     interface_fonctionne = True
     while interface_fonctionne:
@@ -18,7 +18,7 @@ def page1001(gameState: dict) -> int:
         elif action =="M" or action =="m":
             interface.ouvrir_map(gameState)
         elif action == "D" or action == "d":
-            res, deplacement_reussi = move(gameState,gameState["ID_map"])
+            res, deplacement_reussi = map.move(gameState,gameState["ID_map"])
             if deplacement_reussi:
                 interface_fonctionne = False
         else:
